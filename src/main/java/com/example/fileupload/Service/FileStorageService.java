@@ -27,6 +27,7 @@ public class FileStorageService {
 	    data.setFileSize(file.getSize());
 	    data.setUploadedAt(LocalDateTime.now());
 	    data.setData(file.getBytes());
+	    
 	    return ResponseEntity.ok(repository.save(data));
 	}
 
@@ -37,6 +38,8 @@ public class FileStorageService {
         headers.setContentDisposition(ContentDisposition.attachment()
                 .filename(fileData.getOriginalFilename())
                 .build());
+        
+        
 
         return new ResponseEntity<>(fileData.getData(), headers, HttpStatus.OK);
 	}

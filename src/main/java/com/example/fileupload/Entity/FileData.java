@@ -17,6 +17,7 @@ import jakarta.persistence.Table;
 @Table(name = "file_upload")
 public class FileData {
 
+	
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
