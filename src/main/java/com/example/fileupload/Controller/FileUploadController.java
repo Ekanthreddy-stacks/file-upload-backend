@@ -25,6 +25,7 @@ public class FileUploadController {
 		try {
 			return fileService.saveFile(file);
 		} catch (Exception e) {
+			
 			e.printStackTrace();
 			return ResponseEntity.internalServerError().build();
 		}
@@ -33,6 +34,7 @@ public class FileUploadController {
 	@GetMapping("/download")
 	public ResponseEntity<?> downloadFile(@RequestParam Long id) {
 		return fileService.downloadFile(id);
+		
 		
 	}
 }

@@ -9,4 +9,5 @@ import com.example.fileupload.Entity.FileData;
 public interface FileDataRepository extends JpaRepository<FileData, Long>{
 
 	
+	
 }
